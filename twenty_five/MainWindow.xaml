@@ -10,5 +10,6 @@
         <Canvas x:Name="lalala" Margin="0,0,400,0">
             
         </Canvas>
+        <Button x:Name="ll"  Content="Button" HorizontalAlignment="Left" Margin="592,150,0,0" VerticalAlignment="Top" Click="ll_Click"/>
     </Grid>
 </Window>
