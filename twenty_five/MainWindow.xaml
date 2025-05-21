@@ -5,11 +5,26 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:twenty_five"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        WindowState="Maximized"
+        Title="MainWindow" Height="450" Width="800" PreviewKeyDown="Window_PreviewKeyDown">
     <Grid>
-        <Canvas x:Name="lalala" Margin="0,0,400,0">
+        <GroupBox Background="DarkBlue">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+        <Canvas  x:Name="lalala"  Grid.Row="0" Grid.RowSpan="2">
             
         </Canvas>
-        <Button x:Name="ll"  Content="Button" HorizontalAlignment="Left" Margin="592,150,0,0" VerticalAlignment="Top" Click="ll_Click"/>
+        <Button x:Name="AddStar" Grid.Row="1" Grid.Column="1" Margin="110,0,0,0" Content="Еще" HorizontalAlignment="Left" FontSize="18"  VerticalAlignment="Top" Click="Click" />
+                <Button x:Name="Right" Grid.Row="1" Grid.Column="1" Margin="156,0,0,0" Content="3/" HorizontalAlignment="Left" FontSize="18"  VerticalAlignment="Top" Click="Click" FontFamily="Wingdings 3"  />
+
+            </Grid>            
+        </GroupBox>
     </Grid>
 </Window>
