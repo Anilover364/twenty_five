@@ -6,9 +6,10 @@
         xmlns:local="clr-namespace:twenty_five"
         mc:Ignorable="d"
         WindowState="Maximized"
+        ResizeMode="NoResize"
         Title="MainWindow" Height="450" Width="800" PreviewKeyDown="Window_PreviewKeyDown">
     <Grid>
-        <GroupBox Background="DarkBlue">
+        <GroupBox Background="DarkBlue" BorderThickness="0" Margin="-5,0,0,0">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
@@ -21,9 +22,33 @@
         <Canvas  x:Name="lalala"  Grid.Row="0" Grid.RowSpan="2">
             
         </Canvas>
-        <Button x:Name="AddStar" Grid.Row="1" Grid.Column="1" Margin="110,0,0,0" Content="Еще" HorizontalAlignment="Left" FontSize="18"  VerticalAlignment="Top" Click="Click" />
-                <Button x:Name="Right" Grid.Row="1" Grid.Column="1" Margin="156,0,0,0" Content="3/" HorizontalAlignment="Left" FontSize="18"  VerticalAlignment="Top" Click="Click" FontFamily="Wingdings 3"  />
-
+                <Grid Grid.Column="1" Grid.Row="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Viewbox Margin="20,20,20,20" Grid.Row="1" Grid.Column="1" >
+                        
+                
+                    </Viewbox>
+                </Grid>
+                <Menu HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="21">
+                    <MenuItem  x:Name="stars" Header="Звезды">
+                        <MenuItem x:Name="Delete" Header="Удалить" ToolTip="Выключи её нахуй" Click="MenuClick" />
+                        <MenuItem x:Name="Painte" Header="Покрасить" ToolTip="Звезды в цвет говна" Click="MenuClick">
+                            <MenuItem.Icon>
+                                <Rectangle x:Name="PainIco" Width="20" Height="20"  Stroke="Black" StrokeThickness="2"/>
+                            </MenuItem.Icon>
+                            </MenuItem>
+                        <MenuItem x:Name="AddStar" Header="Ещё звёздочек" Click="MenuClick"/>
+                    </MenuItem>
+                </Menu>
             </Grid>            
         </GroupBox>
     </Grid>
